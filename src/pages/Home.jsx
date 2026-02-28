@@ -1,8 +1,4 @@
-import profile from "../assets/profile.avif";
 import profile1 from "../assets/profile1.JPG"
-import profile2 from "../assets/profile2.jpeg"
-import pic2__ from "../assets/pic2__.jpg"
-import profile3 from "../assets/profile3.jpeg"
 
 const Home = () => {
   return (

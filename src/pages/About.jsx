@@ -27,9 +27,8 @@ const About = () => {
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              I enjoy bridging the gap between design and logic. Whether I’m
-              crafting a responsive React component, or optimizing a database, I
-              focus on efficiency, clarity, and analytical problem solving.
+              I enjoy bridging the gap between design and logic, with a strong focus on clarity, efficiency, and analytical problem solving.
+              As a curious and lifelong learner, I continuously expand my knowledge through books, courses, and internships to grow as an efficient and impactful developer.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed italic border-t pt-4">
@@ -58,7 +57,7 @@ const About = () => {
             <div className="bg-gray-100 p-6 rounded-2xl border-l-4 border-gray-500">
               <h3 className="font-bold text-lg text-gray-800 mb-2">My Focus</h3>
               <p className="text-gray-700 leading-relaxed">
-                Full-stack development
+                Full-stack development,
                 <br />
                 Data Analytics, and
                 <br />
