@@ -5,9 +5,8 @@ import {
   faDatabase,
   faGear,
   faGlobe,
-  faServer,
   faChartLine,
-  faHexagonNodes
+  faHexagonNodes,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Skills = () => {
@@ -57,7 +56,13 @@ const Skills = () => {
     },
     {
       title: "Artificial Intelligence and Machine learning",
-      skills: ["Scikit-learn", "Supervised Learning", "Model Evaluation","Generative AI", "Prompt Engineering"],
+      skills: [
+        "Scikit-learn",
+        "Supervised Learning",
+        "Model Evaluation",
+        "Generative AI",
+        "Prompt Engineering",
+      ],
       icon: faHexagonNodes,
       iconType: "fa",
       bgColor: "bg-gray-50",
@@ -124,23 +129,8 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        {/* First Row - 4 Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-          {skillCategories.slice(0, 3).map((category, index) => (
-            <SkillCard key={index} category={category} />
-          ))}
-        </div>
-
-        {/* Second Row - 2 Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-          {skillCategories.slice(3, 5).map((category, index) => (
-            <SkillCard key={index} category={category} />
-          ))}
-        </div>
-
-        {/* Third Row - 2 Columns */}
-        <div className="grid grid-cols-1 gap-6">
-          {skillCategories.slice(5, 6).map((category, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skillCategories.map((category, index) => (
             <SkillCard key={index} category={category} />
           ))}
         </div>
