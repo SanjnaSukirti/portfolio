@@ -41,7 +41,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="p-6 rounded-2xl bg-pink-50 shadow-sm border-2 border-transparent hover:border-pink-500 transition-all duration-300"
+              className="p-6 rounded-2xl bg-pink-50 shadow-sm border-2 border-gray-200 hover:border-pink-500 transition-all hover:-translate-y-1 duration-300"
             >
               <h3 className="font-bold text-xl text-gray-800">
                 {project.name}

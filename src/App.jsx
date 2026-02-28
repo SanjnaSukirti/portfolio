@@ -5,6 +5,7 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import AchievementsCerts from "./pages/AchievementsCerts";
+import Internships from "./pages/Internships";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Skills />
         <Projects />
         <AchievementsCerts />
+        <Internships />
         <Contact />
       </div>
     </>

@@ -14,9 +14,6 @@ const About = () => {
 
         {/* Content Layout */}
         <div className="grid md:grid-cols-3 gap-10">
-          {/* Left Column: Education/Highlight */}
-
-          {/* Right Column: Main Bio (Spans 2 columns) */}
           <div className="md:col-span-2 space-y-4 text-justify">
             <p className="text-lg text-gray-700 leading-relaxed">
               Hello! I'm <b>Sanjna Sukirti</b>, a dedicated Computer Science student

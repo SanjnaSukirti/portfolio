@@ -123,7 +123,7 @@ const Skills = () => {
       <div className="w-full max-w-6xl bg-white rounded-3xl shadow-xl p-10 md:p-16 border border-pink-50">
         {/* Section Heading */}
         <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center">
             Technical <span className="text-pink-600">Skills</span>
           </h2>
         </div>
