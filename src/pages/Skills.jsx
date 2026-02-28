@@ -1,6 +1,14 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faDatabase, faGear, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCode,
+  faDatabase,
+  faGear,
+  faGlobe,
+  faServer,
+  faChartLine,
+  faHexagonNodes
+} from "@fortawesome/free-solid-svg-icons";
 
 const Skills = () => {
   const skillCategories = [
@@ -14,8 +22,8 @@ const Skills = () => {
       textColor: "text-pink-800",
     },
     {
-      title: "Web Technologies",
-      skills: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
+      title: "Frontend Technologies",
+      skills: ["React", "JavaScript", "HTML", "CSS", "Tailwind CSS"],
       icon: faGlobe,
       iconType: "fa",
       bgColor: "bg-gray-50",
@@ -23,8 +31,8 @@ const Skills = () => {
       textColor: "text-pink-800",
     },
     {
-      title: "Databases",
-      skills: ["MySQL", "MongoDB"],
+      title: "Backend and Databases",
+      skills: ["Node.js", "MySQL", "MongoDB", "Firebase"],
       icon: faDatabase,
       iconType: "fa",
       bgColor: "bg-gray-50",
@@ -32,8 +40,41 @@ const Skills = () => {
       textColor: "text-pink-800",
     },
     {
+      title: "Data Science",
+      skills: [
+        "Pandas",
+        "NumPy",
+        "Data Cleaning & Preprocessing",
+        "Exploratory Data Analysis (EDA)",
+        "Statistical Analysis",
+        "Data Visualization (Matplotlib, Plotly)",
+      ],
+      icon: faChartLine,
+      iconType: "fa",
+      bgColor: "bg-gray-50",
+      borderColor: "border-gray-500",
+      textColor: "text-pink-800",
+    },
+    {
+      title: "Artificial Intelligence and Machine learning",
+      skills: ["Scikit-learn", "Supervised Learning", "Model Evaluation","Generative AI", "Prompt Engineering"],
+      icon: faHexagonNodes,
+      iconType: "fa",
+      bgColor: "bg-gray-50",
+      borderColor: "border-gray-500",
+      textColor: "text-pink-800",
+    },
+    {
       title: "Tools & Platforms",
-      skills: ["Git", "VS Code", "MS Office", "Streamlit", "Firebase"],
+      skills: [
+        "Git",
+        "GitHub",
+        "Streamlit",
+        "Jupyter Notebook",
+        "Google Colab",
+        "Kaggle",
+        "VS Code",
+      ],
       icon: faGear,
       iconType: "fa",
       bgColor: "bg-gray-50",
@@ -41,6 +82,33 @@ const Skills = () => {
       textColor: "text-pink-800",
     },
   ];
+
+  const SkillCard = ({ category }) => (
+    <div
+      className={`${category.bgColor} p-6 rounded-3xl border-2 ${category.borderColor} shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300`}
+    >
+      <div className="flex items-center gap-3 mb-4">
+        <FontAwesomeIcon
+          icon={category.icon}
+          className="text-3xl text-pink-500"
+        />
+        <h3 className={`font-bold text-lg ${category.textColor}`}>
+          {category.title}
+        </h3>
+      </div>
+
+      <div className="flex flex-wrap gap-2">
+        {category.skills.map((skill, sIndex) => (
+          <span
+            key={sIndex}
+            className="bg-white px-3 py-1 rounded-full font-medium text-base text-gray-600 border border-gray-100 shadow-sm"
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <section
@@ -51,42 +119,29 @@ const Skills = () => {
         {/* Section Heading */}
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-            Technical <span className="text-pink-600">Expertise</span>
+            Technical <span className="text-pink-600">Skills</span>
           </h2>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
-          {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className={`${category.bgColor} p-6 rounded-3xl bg-gray-100 border-3 ${category.borderColor} shadow-sm hover:shadow-md transition-shadow duration-300`}
-            >
-              <div className="flex items-center gap-3 mb-4">
-                {category.iconType === "fa" ? (
-                  <FontAwesomeIcon
-                    icon={category.icon}
-                    className="text-3xl text-pink-500"
-                  />
-                ) : (
-                  <span className="text-6xl">{category.icon}</span>
-                )}
-                <h3 className={`font-bold text-lg ${category.textColor}`}>
-                  {category.title}
-                </h3>
-              </div>
+        {/* First Row - 4 Columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+          {skillCategories.slice(0, 3).map((category, index) => (
+            <SkillCard key={index} category={category} />
+          ))}
+        </div>
 
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill, sIndex) => (
-                  <span
-                    key={sIndex}
-                    className="bg-white px-3 py-1 rounded-full font-medium text-base text-gray-600 border border-gray-100 shadow-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+        {/* Second Row - 2 Columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+          {skillCategories.slice(3, 5).map((category, index) => (
+            <SkillCard key={index} category={category} />
+          ))}
+        </div>
+
+        {/* Third Row - 2 Columns */}
+        <div className="grid grid-cols-1 gap-6">
+          {skillCategories.slice(5, 6).map((category, index) => (
+            <SkillCard key={index} category={category} />
           ))}
         </div>
       </div>
