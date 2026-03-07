@@ -1,4 +1,4 @@
-import resume from "../assets/resume_document.pdf";
+import resume_document from "../assets/resume_document.pdf";
 
 const FixedHeader = () => {
   return (
@@ -52,7 +52,7 @@ const FixedHeader = () => {
 
         {/* Download Resume Button */}
         <a
-          href={resume}
+          href={resume_document}
           download
           className="bg-pink-200 text-black px-3 py-1 rounded-lg text-base flex items-center justify-center hover:bg-pink-400 transition-colors"
         >
