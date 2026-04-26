@@ -44,7 +44,6 @@ const Skills = () => {
         "Pandas",
         "NumPy",
         "Data Cleaning & Preprocessing",
-        "Exploratory Data Analysis (EDA)",
         "Statistical Analysis",
         "Data Visualization (Matplotlib, Plotly)",
       ],

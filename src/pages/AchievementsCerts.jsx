@@ -20,11 +20,11 @@ const AchievementsCerts = () => {
         <div className="flex flex-col">
           <span>
             SQL: Gold Level 5
-            <FontAwesomeIcon icon={faStar} className="text-[#FFD700]" />
-            <FontAwesomeIcon icon={faStar} className="text-[#FFD700]" />
-            <FontAwesomeIcon icon={faStar} className="text-[#FFD700]" />
-            <FontAwesomeIcon icon={faStar} className="text-[#FFD700]" />
-            <FontAwesomeIcon icon={faStar} className="text-[#FFD700]" />
+            <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+            <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+            <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+            <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+            <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
           </span>
           <span>
             Python: Silver Level 3
@@ -47,6 +47,16 @@ const AchievementsCerts = () => {
   ];
 
   const certifications = [
+    {
+      title: "Data Base Management System",
+      issuer: "NPTEL",
+      year: 2026,
+    },
+    {
+      title: "UiPath Automation Developer Associate Training",
+      issuer: "UiPath",
+      year: 2026,
+    },
     {
       title: "Frontend Web Developer Certification",
       issuer: "Infosys Springboard",
@@ -92,8 +102,6 @@ const AchievementsCerts = () => {
       issuer: "NPTEL - IIT Kharagpur",
       year: 2024,
     },
-
-    // add more certifications here
   ];
 
   return (
@@ -133,11 +141,11 @@ const AchievementsCerts = () => {
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 p-4 rounded-2xl bg-white shadow-sm border border-gray-200"
+              className="flex items-center gap-4 p-5 rounded-2xl bg-white shadow-sm border border-gray-200"
             >
               <div>
-                <h4 className="font-semibold text-gray-800">{cert.title}</h4>
-                <p className="text-gray-600 text-lg">
+                <h4 className="font-semibold text-gray-800 text-base">{cert.title}</h4>
+                <p className="text-gray-600 text-base">
                   {cert.issuer} - {cert.year}
                 </p>
               </div>
