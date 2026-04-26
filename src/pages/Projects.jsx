@@ -15,6 +15,14 @@ const projects = [
     githubLink: "https://github.com/SanjnaSukirti/urban_livability_app",
   },
   {
+    name: "Fake Job & Internship Detection System",
+    description:
+      "Web app to detect fake job offers and internships using a CNN model with rule-based validation, email verification and scam pattern analysis for an explainable risk score. Deployed using Vercel and Render.",
+    tech: "React, FastAPI, Python, TensorFlow/Keras (CNN), Firebase",
+    liveLink: "https://fake-offer-letter-classifier.vercel.app/analyze",
+    githubPrivate: true,
+  },
+  {
     name: "Music Player Application",
     description:
       "Music player web app with HTML, Tailwind CSS, JavaScript, React, and Firebase authentication. Features user/admin roles, real-time playback and song management with Cloudinary integration.",
@@ -41,15 +49,19 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="p-6 rounded-2xl bg-pink-50 shadow-sm border-2 border-gray-200 hover:border-pink-500 transition-all hover:-translate-y-1 duration-300"
+              className={`p-6 rounded-2xl bg-pink-50 shadow-sm border-2 border-gray-300 hover:border-pink-500 transition-all hover:-translate-y-1 duration-300 
+              ${projects.length % 2 !== 0 && index === projects.length - 1 
+                ? "sm:col-span-2 sm:max-w-lg sm:mx-auto" : ""}`}
             >
-              <h3 className="font-bold text-xl text-gray-800">
+              <h3 className="font-bold text-xl text-gray-800 text-center pb-2">
                 {project.name}
               </h3>
-              <p className="text-gray-700 mt-2 text-lg">
+              <p className="text-gray-700 mt-2 text-lg leading-[1.7]">
                 {project.description}
               </p>
-              <p className="text-gray-500 text-base mt-2">{project.tech}</p>
+              <p className="text-gray-600 text-base mt-2 italic">
+                {project.tech}
+              </p>
               <div className="mt-4 flex gap-4 text-xl">
                 {project.liveLink && (
                   <a
@@ -62,7 +74,7 @@ const Projects = () => {
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                   </a>
                 )}
-                {project.githubLink && (
+                {project.githubLink ? (
                   <a
                     href={project.githubLink}
                     target="_blank"
@@ -72,6 +84,11 @@ const Projects = () => {
                     GitHub
                     <FontAwesomeIcon icon={faCode} />
                   </a>
+                ) : (
+                  <span className="flex items-center gap-2 text-gray-600 font-semibold text-lg">
+                    Private Repository
+                    <FontAwesomeIcon icon={faCode} />
+                  </span>
                 )}
               </div>
             </div>

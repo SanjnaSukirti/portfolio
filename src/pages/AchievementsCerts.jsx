@@ -8,7 +8,7 @@ const AchievementsCerts = () => {
     {
       platform: "LeetCode",
       description:
-        "Solved 110 problems mainly in Python and Java, focusing on Arrays, Strings, and Math problems.",
+        "Solved 120+ problems mainly in Python and Java, focusing on Arrays, Strings, and Two Pointers techniques.",
       icon: faLeetcode,
       bgColor: "bg-yellow-100",
       textColor: "text-yellow-800",
@@ -19,15 +19,23 @@ const AchievementsCerts = () => {
       description: (
         <div className="flex flex-col">
           <span>
-            Java: Bronze Level 2{" "}
-            <FontAwesomeIcon icon={faStar} className="text-[#ffb69c]" />
-            <FontAwesomeIcon icon={faStar} className="text-[#ffb69c]" />
+            SQL: Gold Level 5
+            <FontAwesomeIcon icon={faStar} className="text-[#FFD700]" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FFD700]" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FFD700]" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FFD700]" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FFD700]" />
           </span>
           <span>
             Python: Silver Level 3
             <FontAwesomeIcon icon={faStar} className="text-[#b3bdbf]" />
             <FontAwesomeIcon icon={faStar} className="text-[#b3bdbf]" />
             <FontAwesomeIcon icon={faStar} className="text-[#b3bdbf]" />
+          </span>
+          <span>
+            Java: Bronze Level 2{" "}
+            <FontAwesomeIcon icon={faStar} className="text-[#CD7F32]" />
+            <FontAwesomeIcon icon={faStar} className="text-[#CD7F32]" />
           </span>
         </div>
       ),

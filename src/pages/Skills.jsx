@@ -31,7 +31,7 @@ const Skills = () => {
     },
     {
       title: "Backend and Databases",
-      skills: ["Node.js", "MySQL", "MongoDB", "Firebase"],
+      skills: ["Node.js", "FastAPI", "MySQL", "MongoDB", "Firebase"],
       icon: faDatabase,
       iconType: "fa",
       bgColor: "bg-gray-50",
@@ -59,9 +59,9 @@ const Skills = () => {
       skills: [
         "Scikit-learn",
         "Supervised Learning",
-        "Model Evaluation",
         "Generative AI",
         "Prompt Engineering",
+        "CNN",
       ],
       icon: faHexagonNodes,
       iconType: "fa",
