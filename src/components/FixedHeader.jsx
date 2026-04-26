@@ -1,4 +1,4 @@
-import resume_document from "../assets/resume_document.pdf";
+import resume_document from "../assets/resume.pdf";
 
 const FixedHeader = () => {
   return (
